@@ -1,6 +1,18 @@
 (function () {
   'use strict';
 
+  /* ---------- 字体就绪后再显示整站，避免字体切换闪烁 ---------- */
+  (function waitFonts() {
+    const root = document.documentElement;
+    const ready = () => root.classList.add('fonts-ready');
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(ready).catch(ready);
+      window.setTimeout(ready, 2500);
+    } else {
+      ready();
+    }
+  })();
+
   const $ = (s, c = document) => c.querySelector(s);
   const $$ = (s, c = document) => Array.from(c.querySelectorAll(s));
   const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
@@ -416,10 +428,6 @@
       const list = ADVICE.map((t, i) => `
         <div class="f-term"><span class="f-idx">${String(i + 1).padStart(2, '0')}</span><p>${t}</p></div>`).join('');
       return `<div class="f-grid">` + fHead('06 / advice', '食用建议') + `<div class="f-content">
-        <section class="f-sec">
-          <h4 class="f-sec-t">以下建议</h4>
-          <p class="f-body f-drop"><strong class="f-strong">先看一遍</strong>，再决定要不要开始。</p>
-        </section>
         <div class="f-terms">${list}</div>
       </div>` + fFoot('06') + `</div>`;
     }
