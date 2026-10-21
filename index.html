@@ -1,9 +1,9 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <meta name="theme-color" content="#F0ECE3">
+  <meta name="theme-color" content="#F2F1ED">
   <meta name="description" content="venus">
   <meta property="og:title" content="venus">
   <meta property="og:description" content="a personal archive">
@@ -12,25 +12,31 @@
   <title>venus</title>
   <link rel="preload" as="image" href="images/image3.webp">
   <link rel="preload" as="image" href="images/feng.webp">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/noto-serif-sc@5.0.0/400.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/noto-serif-sc@5.0.0/500.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/noto-serif-sc@5.0.0/700.css">
   <link rel="stylesheet" href="style.css">
   <style>
-    /* 内联首帧样式：保证 style.css 加载前首帧就是正确字体和背景，避免字体闪烁 */
+    /* 首帧内联样式：样式表加载前就锁定字体和背景，避免字体闪烁和底色突变 */
     html {
-      --paper: #F0ECE3;
+      --paper: #F2F1ED;
       --ink: #34393D;
-      --mono: 'Courier New', 'Courier Prime', 'Consolas', 'SimSun', 'Songti SC', monospace;
-      --type: 'Courier New', 'Courier Prime', 'Consolas', 'SimSun', 'Songti SC', monospace;
-      --serif: 'Times New Roman', 'Songti SC', 'SimSun', serif;
-      --kai: 'Kaiti SC', 'KaiTi', 'STKaiti', serif;
-      --mincho: 'Songti SC', 'SimSun', 'Noto Serif SC', serif;
+      --mono: 'Courier New', 'Courier Prime', 'Consolas', 'Noto Serif SC', 'SimSun', 'Songti SC', monospace;
+      --type: 'Courier New', 'Courier Prime', 'Consolas', 'Noto Serif SC', 'SimSun', 'Songti SC', monospace;
+      --serif: 'Times New Roman', 'Noto Serif SC', 'Songti SC', 'SimSun', serif;
+      --kai: 'Kaiti SC', 'KaiTi', 'STKaiti', 'Noto Serif SC', serif;
+      --mincho: 'Noto Serif SC', 'Songti SC', 'SimSun', serif;
     }
     html, body { margin: 0; padding: 0; }
     body {
-      background: #F0ECE3;
+      background: #F2F1ED;
       color: #34393D;
-      font-family: 'Courier New', 'Courier Prime', 'Consolas', 'SimSun', 'Songti SC', monospace;
+      font-family: 'Courier New', 'Courier Prime', 'Consolas', 'Noto Serif SC', 'SimSun', 'Songti SC', monospace;
       -webkit-font-smoothing: antialiased;
     }
+    .site { opacity: 0; transition: opacity .4s ease; }
+    html.fonts-ready .site { opacity: 1; }
   </style>
 </head>
 <body>
