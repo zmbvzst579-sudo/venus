@@ -15,7 +15,7 @@ img { display: block; max-width: 100%; }
 a { color: inherit; }
 
 :root {
-  --paper: #F0ECE3;
+  --paper: #F2F1ED;
   --ink: #34393D;
   --ink-2: #575E63;
   --muted: #979B98;
@@ -26,11 +26,11 @@ a { color: inherit; }
   --frame: rgba(174, 122, 117, 0.5);
   --dark: #2E3338;
 
-  --paper-0: rgba(240, 236, 227, 0);
-  --paper-60: rgba(240, 236, 227, 0.6);
-  --paper-80: rgba(240, 236, 227, 0.8);
-  --paper-86: rgba(240, 236, 227, 0.86);
-  --paper-90: rgba(240, 236, 227, 0.9);
+  --paper-0: rgba(242, 241, 237, 0);
+  --paper-60: rgba(242, 241, 237, 0.6);
+  --paper-80: rgba(242, 241, 237, 0.8);
+  --paper-86: rgba(242, 241, 237, 0.86);
+  --paper-90: rgba(242, 241, 237, 0.9);
   --card-bg: rgba(255, 255, 255, 0.26);
   --card-bg-2: rgba(255, 255, 255, 0.3);
   --receipt-bg: #F2EFE7;
@@ -42,11 +42,11 @@ a { color: inherit; }
   --tag-ochre: #C3A469;
   --tag-charcoal: #383D42;
 
-  --mono: 'Courier New', 'Courier Prime', 'Consolas', 'SimSun', 'Songti SC', monospace;
-  --type: 'Courier New', 'Courier Prime', 'Consolas', 'SimSun', 'Songti SC', monospace;
-  --serif: 'Times New Roman', 'Songti SC', 'SimSun', serif;
-  --kai: 'Kaiti SC', 'KaiTi', 'STKaiti', serif;
-  --mincho: 'Songti SC', 'SimSun', 'Noto Serif SC', serif;
+  --mono: 'Courier New', 'Courier Prime', 'Consolas', 'Noto Serif SC', 'SimSun', 'Songti SC', monospace;
+  --type: 'Courier New', 'Courier Prime', 'Consolas', 'Noto Serif SC', 'SimSun', 'Songti SC', monospace;
+  --serif: 'Times New Roman', 'Noto Serif SC', 'Songti SC', 'SimSun', serif;
+  --kai: 'Kaiti SC', 'KaiTi', 'STKaiti', 'Noto Serif SC', serif;
+  --mincho: 'Noto Serif SC', 'Songti SC', 'SimSun', serif;
   --ease: cubic-bezier(.2, .7, .2, 1);
 
   --peek: clamp(30px, 12vw, 130px);
@@ -631,7 +631,11 @@ html[data-theme="red"] .about-name {
 .receipt-gt { font-size: 8.5px; letter-spacing: .18em; color: var(--red); text-transform: uppercase; opacity: .72; }
 .receipt-line { display: flex; align-items: baseline; gap: 4px; font-size: 10px; line-height: 1.55; }
 .receipt-line .dots { flex: 1 1 auto; border-bottom: 1px dotted var(--line-soft); transform: translateY(-2px); min-width: 8px; }
-.receipt-line span:last-child { color: var(--muted); white-space: nowrap; }
+.receipt-line span:last-child {
+  color: var(--muted);
+  white-space: nowrap;
+  font-weight: 700;
+}
 .receipt-foot { display: flex; justify-content: space-between; gap: 8px; font-size: 8px; letter-spacing: .14em; color: var(--muted); text-transform: uppercase; }
 .receipt-barcode {
   height: 22px; margin-top: 9px; opacity: .4;
